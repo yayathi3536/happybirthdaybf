@@ -1,52 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Memories | vaishuu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="cursor-glow"></div>
-  <div class="floating-bg"></div>
-
-  <nav class="navbar glass">
-    <a href="index.html" class="logo">vaishuu</a>
-    <div class="nav-links">
-      <a href="memories.html">Memories</a>
-      <a href="reasons.html">Reasons</a>
-      <a href="letter.html">Letter</a>
-      <a href="cake.html">Cake</a>
-      <a href="final.html">Final</a>
+<body class="memories-body">
+    <div class="header">
+        <h1>Our Beautiful Memories ❤️</h1>
+        <p>Click on the cards to see our special moments</p>
     </div>
-  </nav>
 
-  <header class="sub-hero reveal">
-    <p class="script-text">our little scrapbook</p>
-    <h1>Memory Lane</h1>
-    <p>Some days become photos, some photos become forever.</p>
-  </header>
+    <div class="memory-grid">
+        <!-- Card 1 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic1.jpg" alt="Memory 1">
+                </div>
+                <div class="card-back">
+                    <p>The day we met! Every moment since has been pure magic. ✨</p>
+                </div>
+            </div>
+        </div>
 
-  <section class="masonry">
-    <div class="polaroid reveal">
-      <div class="photo" style="background-image: url('assets/1.jpg');"></div>
-      <p>favorite chaos😙(iykyk)</p>
-    </div>
-    <div class="polaroid tall reveal delay-1">
-      <div class="photo">
-  <video autoplay muted loop playsinline>
-    <source src="assets/birth.mp4" type="video/mp4">
-  </video>
-</div>
-      <p>Happy birthday Bulbul🫰</p>
-    </div>
-    <div class="polaroid reveal delay-2">
-      <div class="photo" style="background-image: url('assets/ak.jpeg');"></div>
-      <p>forever chapter🥰</p>
-    </div>
-  </section>
+        <!-- Card 2 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic2.jpg" alt="Memory 2">
+                </div>
+                <div class="card-back">
+                    <p>Our first date. I was so nervous, but your smile made everything perfect. 💑</p>
+                </div>
+            </div>
+        </div>
 
-  <script src="script.js"></script>
+        <!-- Card 3 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic3.jpg" alt="Memory 3">
+                </div>
+                <div class="card-back">
+                    <p>That crazy adventure! Doing silly things with you is my absolute favorite pastime. 🗺️</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic4.jpg" alt="Memory 4">
+                </div>
+                <div class="card-back">
+                    <p>Your laugh in this moment is something I want to keep safe forever. 🥰</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic5.jpg" alt="Memory 5">
+                </div>
+                <div class="card-back">
+                    <p>A quiet day just holding hands. Sometimes, silence with you speaks a thousand words. 🤫❤️</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic6.jpg" alt="Memory 6">
+                </div>
+                <div class="card-back">
+                    <p>Celebrating milestones together. I will always be your number one cheerleader! 🥳🎉</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic7.jpg" alt="Memory 7">
+                </div>
+                <div class="card-back">
+                    <p>Look how cute you look here! I fall in love with you a little bit more every single day. 💗</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="memory-card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pic8.jpg" alt="Memory 8">
+                </div>
+                <div class="card-back">
+                    <p>To many more years of making memories together. Happy Birthday, my love! 🎂💝</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a href="index.html" class="nav-btn">⬅️ Back Home</a>
+        <a href="letter.html" class="nav-btn">Read My Letter ➡️</a>
+    </div>
 </body>
-</html>
+                  </html>
+                  
