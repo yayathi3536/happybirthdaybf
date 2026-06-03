@@ -166,9 +166,12 @@ $('#randomReasonBtn')?.addEventListener('click', () => {
 
 const envelope = $('#envelope');
 const letterText = `you are one of those rare people who make the world feel gentler just by being in it. Your presence brings a kind of warmth, peace, and beauty that words can never fully explain.
-On your birthday, I just want you to know how deeply you are loved, not just today, but every single day. You deserve happiness that feels real, dreams that slowly turn into reality, and moments so beautiful that your heart wants to keep them forever.
+
+On your birthday, I just want you to know how deeply you are loved, not just today, but every single day. You deserve happiness that feels real, dreams that slowly turn into reality, and moments that take your breath away.
+
 I hope this year gives you soft mornings, peaceful nights, unexpected smiles, and every little thing your soul has been waiting for.
-Happy Birthday Babuuuuuuuuuuu You are special in ways you may never fully realize, and you deserve magic, love, and endless happiness in every chapter of your life. I Love You🫶`;
+
+Happy Birthday vaishuu You are special in ways you may never fully realize, and you deserve magic, love, and endless happiness in every chapter of your life. I Love You🫶`;
 let hasTypedLetter = false;
 
 envelope?.addEventListener('click', () => {
@@ -213,7 +216,7 @@ cutCakeBtn?.addEventListener('click', async () => {
   cake.classList.add('sliced');
   await wait(900);
 
-  cakeStageText.textContent = 'first slice for my Babuuu 🎉';
+  cakeStageText.textContent = 'first slice for yayathi 🎉';
   cutCakeBtn.textContent = 'Cake Cut 🎉';
 
   if (typeof confetti === 'function') {
