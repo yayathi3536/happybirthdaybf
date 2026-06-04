@@ -1,96 +1,208 @@
-hi m<!DOCTYPE html>
+
+     <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Memories</title>
+    <title>Our Cozy Memories</title>
+    <!-- Google Fonts for a handwritten, cozy look -->
+    <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom cozy layout styles to overlay onto your website */
+        body.memories-body {
+            background-color: #fff5f5; /* Soft warm blush pink tint */
+            font-family: 'Nunito', sans-serif;
+            padding: 30px 15px;
+        }
+        .header h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 3.5rem;
+            color: #d65a6f;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #8c7373;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        .memory-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            padding: 10px;
+        }
+        /* Polaroid photo card style */
+        .memory-card {
+            background: #ffffff;
+            padding: 15px 15px 30px 15px;
+            box-shadow: 0 8px 20px rgba(222, 184, 184, 0.3);
+            border-radius: 4px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+        /* Cozy Polaroid Tilt Effect */
+        .memory-card:nth-child(odd) { transform: rotate(-2deg); }
+        .memory-card:nth-child(even) { transform: rotate(2deg); }
+        
+        .memory-card:hover {
+            transform: scale(1.04) rotate(0deg) !important;
+            box-shadow: 0 12px 25px rgba(214, 90, 111, 0.2);
+            z-index: 10;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 320px;
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 2px;
+            overflow: hidden;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid #f5ebeb;
+        }
+        .card-back {
+            background-color: #fff9f9;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px dashed #e8b4bc;
+        }
+        .card-back p {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            color: #614c4c;
+            text-align: center;
+            line-height: 1.3;
+            margin: 0;
+        }
+        /* Flip animation triggered by JavaScript */
+        .memory-card.flipped .card-front {
+            transform: rotateY(-180deg);
+        }
+        .memory-card.flipped .card-back {
+            transform: rotateY(0deg);
+        }
+        .navigation {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .nav-btn {
+            background-color: #d65a6f;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 0 10px;
+            box-shadow: 0 4px 10px rgba(214, 90, 111, 0.2);
+            transition: background 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: #b84357;
+        }
+    </style>
 </head>
 <body class="memories-body">
-    <div class="header">
-        <h1>Our Beautiful Memories ❤️</h1>
-        <p>Click on the cards to see our special moments</p>
+
+    <div class="header" style="text-align: center;">
+        <h1>Our Cozy Little Moments ❤️</h1>
+        <p>Tap each polaroid photo to unfold a little message...</p>
     </div>
 
     <div class="memory-grid">
-        <!-- Card 1 -->
+        <!-- Memory 1 -->
         <div class="memory-card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
                 <div class="card-front">
                     <img src="pic1.jpg" alt="Memory 1">
                 </div>
                 <div class="card-back">
-                    <p>The day we met! Every moment since has been pure magic. ✨</p>
+                    <p>Where it all started... Meeting you was the best plot twist in my life story. ✨</p>
                 </div>
             </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Memory 2 -->
         <div class="memory-card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
                 <div class="card-front">
                     <img src="pic2.jpg" alt="Memory 2">
                 </div>
                 <div class="card-back">
-                    <p>Our first date. I was so nervous, but your smile made everything perfect. 💑</p>
+                    <p>Our quiet dinner dates. I secretly stare at your smile when you aren't looking. 💑</p>
                 </div>
             </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Memory 3 -->
         <div class="memory-card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
                 <div class="card-front">
                     <img src="pic3.jpg" alt="Memory 3">
                 </div>
                 <div class="card-back">
-                    <p>That crazy adventure! Doing silly things with you is my absolute favorite pastime. 🗺️</p>
+                    <p>The day we laughed until our stomachs hurt! Life is so much lighter with you around. 🧸</p>
                 </div>
             </div>
         </div>
 
-        <!-- Card 4 -->
+        <!-- Memory 4 -->
         <div class="memory-card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
                 <div class="card-front">
                     <img src="pic4.jpg" alt="Memory 4">
                 </div>
                 <div class="card-back">
-                    <p>Your laugh in this moment is something I want to keep safe forever. 🥰</p>
+                    <p>Just capturing your pure happiness. Your laugh is my favorite soundtrack. 🥰</p>
                 </div>
             </div>
         </div>
 
-        <!-- Card 5 -->
+        <!-- Memory 5 -->
         <div class="memory-card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
                 <div class="card-front">
                     <img src="pic5.jpg" alt="Memory 5">
                 </div>
                 <div class="card-back">
-                    <p>A quiet day just holding hands. Sometimes, silence with you speaks a thousand words. 🤫❤️</p>
+                    <p>A simple day made extraordinary just because we were holding hands. 🌸</p>
                 </div>
             </div>
         </div>
 
-        <!-- Card 6 -->
+        <!-- Memory 6 -->
         <div class="memory-card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
                 <div class="card-front">
                     <img src="pic6.jpg" alt="Memory 6">
                 </div>
                 <div class="card-back">
-                    <p>Celebrating milestones together. I will always be your number one cheerleader! 🥳🎉</p>
+                    <p>To the boy who holds my heart: Happy Birthday. Here is to a lifetime of us. 🎂💝</p>
                 </div>
             </div>
         </div>
-
-        
+    </div>
 
     <div class="navigation">
         <a href="index.html" class="nav-btn">⬅️ Back Home</a>
         <a href="letter.html" class="nav-btn">Read My Letter ➡️</a>
     </div>
+
 </body>
-                  </html>
-                  
+</html>
+             
